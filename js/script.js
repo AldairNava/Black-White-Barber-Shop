@@ -1,5 +1,7 @@
 const menuOpciones = document.querySelector(".menu-opciones");
-const btncontacto = document.getElementById("contacto");
+const btnwhats = document.getElementById("whats");
+const btninsta = document.getElementById("insta");
+const btnface = document.getElementById("face");
 const header = document.querySelector("header");
 const controlesUsuario = document.querySelector(".controles-usuario");
 const contenedor = document.querySelector(".contenedor");
@@ -18,10 +20,14 @@ const responsiveY = ()=>{
 };
 const responsive = ()=>{
     if(window.innerWidth<=1150){
-        menuOpciones.children[0].appendChild(btncontacto);
+        menuOpciones.children[0].appendChild(btnwhats);
+        menuOpciones.children[0].appendChild(btninsta);
+        menuOpciones.children[0].appendChild(btnface);
         header.appendChild(menuOpciones);
     }else{
-        controlesUsuario.appendChild(btncontacto);
+        controlesUsuario.appendChild(btnwhats);
+        controlesUsuario.appendChild(btninsta);
+        controlesUsuario.appendChild(btnface);
         contenedor.appendChild(menuOpciones);
     }
 

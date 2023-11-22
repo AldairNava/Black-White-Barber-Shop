@@ -2,10 +2,10 @@
 
 :root{
     --background-color:rgb(31,31,33);
-    --color-principal:rgb(243, 243, 243);
+    --color-principal:rgb(255, 255, 255);
     --color-texto:rgb(255, 255, 255);
     --color-hover:rgb(125, 176, 243);
-    --color-titulo:rgb(234, 217, 200);
+    --color-titulo:rgb(255, 255, 255);
     --color-morado:rgb(236, 11, 206);
     --s: 200px; /* control the size */
     --c1: #1d1d1d;
@@ -68,6 +68,12 @@ header .menu-opciones{
     background-color: var(--background-color);
     height: auto;
 }
+header .menu-opciones li a:hover{
+    color: var(--color-hover);
+}
+header .menu-opciones ion-icon:hover{
+    color: var(--color-hover);
+}
 header .menu-opciones ul{
     display: flex;
     flex-direction: row;
@@ -101,44 +107,6 @@ header .controles-usuario ion-icon{
 }
 header .controles-usuario ion-icon:hover{
     color: var(--color-hover);
-}
-header #contacto{
-    border: none;
-    cursor: pointer;
-    width: 110px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: var(--color-principal);
-    color: var(--color-texto);
-    font-size: 15px;
-    text-decoration: none;
-    color: var(--background-color);
-    text-align: center;
-    padding-top: 2.5px;
-}
-header #contacto:hover{
-    background-color: var(--background-color);
-}
-header #contacto:hover{
-    color: var(--color-principal);
-}
-header #btncv {
-    padding-top: 2.5px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--color-texto);
-    border: none;
-    cursor: pointer;
-    width: 110px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: var(--color-principal);
-    color: var(--color-texto);
-    font-size: 15px;
-}
-header #btncv:hover{
-    background-color: var(--background-color);
-    color: var(--color-principal);
 }
 header #btn-menu{
     display: none;
@@ -178,15 +146,16 @@ header #btn-menu{
         top: 0;
         margin: 15px;
     }
+    header .menu-opciones ion-icon{
+        font-size: 40px;
+        margin: 5px;
+    }
     header #btn-menu{
         display: block;
     }
     header .contenedor{
         justify-content: center;
     }
-    header #btncv{
-        margin: 15px;
-    }   
     header #contacto{
         margin-top: 10px;
     }
@@ -197,13 +166,14 @@ header #btn-menu{
         width: 35%;
         overflow: hidden;
         transition: height 0.5s ease;
+        text-align: center;
     }
     header .menu-opciones.mostrar{
         position: fixed;
         top: 60px;
         right: 0;
         width: 35%;
-        height: 40%;
+        height: 60%;
         flex-direction: column;
         border-bottom: 2px solid var(--color-principal);
         border-left: 2px solid var(--color-principal);
@@ -221,10 +191,7 @@ header #btn-menu{
     }
 }
 @media (max-width:400px){
-    header .logo img{
-        display: none;
-    }
     header .logo span{
-        font-size: 20px;
+        font-size: 15px;
     }
 }
